@@ -181,16 +181,16 @@ services:
         timeout: 30s
         retries: 10
 
-#  ksqldb-cli:
-#    image: confluentinc/cp-ksqldb-cli:7.4.0
-#    container_name: ksqldb-cli
-#    depends_on:
-#      ksqldb-server:
-#        condition: service_healthy
-#    entrypoint: /bin/sh
-#    tty: true
-#    networks:
-#      - confluent
+  ksqldb-cli:
+    image: confluentinc/cp-ksqldb-cli:7.4.0
+    container_name: ksqldb-cli
+    depends_on:
+      ksqldb-server:
+        condition: service_healthy
+    entrypoint: /bin/sh
+    tty: true
+    networks:
+      - confluent
 
 networks:
   confluent:

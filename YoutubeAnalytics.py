@@ -65,6 +65,7 @@ def kafka_stream(video):
 
     producer.send('youtube_videos', json.dumps(video_res).encode('utf-8'),
                           key=video_id.encode('utf-8'))
+    # producer.flush()
 
     print('Sent ', video['snippet']['title'])
 
@@ -91,6 +92,3 @@ if __name__ == '__main__':
              
     else:
         print("Failed to retrieve data.")
-
-    
-    # producer.flush()
