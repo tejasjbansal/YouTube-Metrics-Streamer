@@ -93,4 +93,4 @@ if __name__ == '__main__':
         print("Failed to retrieve data.")
 
     
-    producer.flush()
+    # producer.flush()
